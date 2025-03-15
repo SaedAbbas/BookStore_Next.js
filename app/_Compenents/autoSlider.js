@@ -1,100 +1,37 @@
 import Image from "next/image";
 import React from "react";
 
-const book1 = "/assets/book1.png";
-const book2 = "/assets/book2.png";
-const book3 = "/assets/book3.png";
-const book4 = "/assets/book4.png";
-const book5 = "/assets/book5.png";
-const book6 = "/assets/book6.png";
+const Bestselling = [
+    {src : '/assets/book1.png' , title : 'Nuclear War' ,author:'Rebecca Yarros'},
+    {src : '/assets/book2.png' , title : 'Convication' ,author:'Prince Harry'},
+    {src : '/assets/book3.png' , title : 'Hillbilly Elegy' ,author:'Jennette McCurdy'},
+    {src : '/assets/book4.png' , title : 'Harry Poter' ,author:'Matthew Perry'},
+    {src : '/assets/book5.png' , title : 'Irome Flame' ,author:'Britney Spears'},
+    {src : '/assets/book6.png' , title : 'Audio Book 05' ,author:'Colleen Hoover'},
+]
 
 const AutoSlider = () => {
   return (
     <div className="flex ml-4 space-x-4 mt-12 overflow-hidden animate-swipe">
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book1}
-          className="rounded-xl "
-        />
+        {
+            Bestselling.map(({src,title,author},index) => (
+                <article key={index} className="overflow-hidden cursor-pointer flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
+                    <Image
+                    alt=""
+                    width={195}
+                    height={195}
+                    src={src}
+                    className="rounded-xl "
+                    />
 
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book2}
-          className="rounded-xl "
-        />
+                    <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
+                    {title}
+                    </h3>
+                    <h2 className="text-gray-400">{author}</h2>
+                </article>
+            ))
+        }
 
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book3}
-          className="rounded-xl "
-        />
-
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book4}
-          className="rounded-xl "
-        />
-
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book5}
-          className="rounded-xl "
-        />
-
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
-      <article className="overflow-hidden flex flex-shrink-0 flex-col dark:shadow-gray-700/25">
-        <Image
-          alt=""
-          width={195}
-          height={195}
-          src={book6}
-          className="rounded-xl "
-        />
-
-        <h3 className="mt-0.5 text-lg text-gray-900 dark:text-white">
-          Atomic Habits
-        </h3>
-        <h2 className="text-gray-400">James Clear</h2>
-      </article>
     </div>
   );
 };
