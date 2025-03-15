@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FaMoon , FaRegMoon } from "react-icons/fa6";
 
-export function DarkMode({ children }) {
+export function DarkMode() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -14,7 +13,7 @@ export function DarkMode({ children }) {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add("dark"); //documentElement === html element
       localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
@@ -23,8 +22,8 @@ export function DarkMode({ children }) {
   }, [isDarkMode]);
 
   return (
-    <div className="absolute top-0 right-4">
-      <button onClick={() => setIsDarkMode(!isDarkMode)}>
+    <div className="absolute top-0 right-7">
+      <button onClick={() => setIsDarkMode(!isDarkMode)} className="cursor-pointer">
         {
             isDarkMode ? (<span className="text-2xl absolute top-4 right-4">🌙</span>):(<span className="text-2xl absolute top-4 right-4">☀️</span>)
         }

@@ -4,12 +4,12 @@ import { FaBookOpen } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <section className="bg-gray-50 dark:bg-gray-900">
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+    <section className="bg-gray-50 dark:bg-gray-900 ">
+      <div className="mx-auto max-sm:max-w-95/100 max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-xl text-center">
             <FaBookOpen className='mx-auto text-8xl bg-teal-500 dark:bg-transparent dark:border-4 border-teal-500 mb-3 px-4 py-3 text-white rounded-3xl'/>
           <h1 className="text-3xl font-extrabold sm:text-5xl text-gray-800 dark:text-gray-100">
-          Read, listen, discover.
+          Read, listen, discover.<br/>
             <strong className="font-extrabold mt-2 text-teal-500 dark:text-teal-400 sm:block">
                 All in one app.
             </strong>
