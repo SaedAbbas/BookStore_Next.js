@@ -18,7 +18,7 @@ const AutoSlider = ({ images, duration }) => {
               width={240}
               height={240}
               src={src}
-              className="rounded-xl object-cover w-full h-auto"
+              className="rounded-[17px] object-cover w-full h-auto"
             />
 
             <h3 className="mt-0.5 text-base sm:text-lg text-gray-900 dark:text-white">
