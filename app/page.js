@@ -40,8 +40,8 @@ export default function Home() {
       <Hero/>
       <MobileGallery />
       <Filter/>
-      <AutoSlider images={Bestselling} duration={20}/>
-      <AutoSlider images={Trending} duration={15}/>
+      <AutoSlider images={Bestselling} duration={10}/>
+      <AutoSlider images={Trending} duration={8}/>
       <Faq/>
     </div>  
   );
