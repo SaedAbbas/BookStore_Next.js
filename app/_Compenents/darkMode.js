@@ -22,10 +22,10 @@ export function DarkMode() {
   }, [isDarkMode]);
 
   return (
-    <div className="absolute top-0 right-7">
+    <div>
       <button onClick={() => setIsDarkMode(!isDarkMode)} className="cursor-pointer">
         {
-            isDarkMode ? (<span className="text-2xl absolute top-4 right-4">🌙</span>):(<span className="text-2xl absolute top-4 right-4">☀️</span>)
+            isDarkMode ? (<span className="text-2xl">🌙</span>):(<span className="text-2xl">☀️</span>)
         }
         
         

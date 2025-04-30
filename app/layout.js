@@ -1,7 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import {Header,Footer} from "./_Compenents/mianLayout"
-import { DarkMode } from "./_Compenents/darkMode";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,11 +20,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   
   return (
-    <html lang="en" className="dark" > 
+    <html lang="en"> 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen dark:bg-gray-900`}
       >
-        <DarkMode/>
           <Header/>
           <main className='flex-grow'>
              {children}

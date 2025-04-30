@@ -36,7 +36,7 @@ export default function Home() {
   ]
 
   return (
-    <div className="dark">
+    <div className="">
       <Hero/>
       <MobileGallery />
       <Filter/>

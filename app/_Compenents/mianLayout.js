@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
 import React from 'react';
+import { DarkMode } from "./darkMode";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-50 dark:bg-gray-900">
+    <header className="bg-gray-50 dark:bg-gray-900 sticky top-0 z-20 ">
       <div className="container mx-auto flex items-center justify-between px-16 pr-24 py-5">
         {/* Logo */}
         <a href="#" className="text-xl font-bold text-teal-600 dark:text-teal-300">
@@ -21,6 +22,7 @@ const Header = () => {
           <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 transition-colors duration-200">Pricing</a>
           <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 transition-colors duration-200">Contact</a>
         </nav>
+          <DarkMode/>
 
         {/* Mobile Menu Button */}
         <button
@@ -41,16 +43,17 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="md:hidden bg-gray-50 dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 absolute w-full top-13 p-4 flex flex-col space-y-4">
-          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 p-2 transition-colors duration-200">Home</a>
-          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 p-2 transition-colors duration-200">About</a>
-          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 p-2 transition-colors duration-200">Services</a>
-          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 p-2 transition-colors duration-200">Pricing</a>
-          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 p-2 transition-colors duration-200">Contact</a>
+        <nav className="md:hidden bg-gray-50 dark:bg-gray-800 shadow-md border border-gray-200 dark:border-gray-700 absolute w-full top-18 p-4 flex flex-col space-y-4 rounded-xl">
+          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 dark:hover:bg-gray-700 p-2 rounded-lg border border-transparent hover:border-teal-300 dark:hover:border-teal-500 transition-colors duration-200">Home</a>
+          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 dark:hover:bg-gray-700 p-2 rounded-lg border border-transparent hover:border-teal-300 dark:hover:border-teal-500 transition-colors duration-200">About</a>
+          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 dark:hover:bg-gray-700 p-2 rounded-lg border border-transparent hover:border-teal-300 dark:hover:border-teal-500 transition-colors duration-200">Services</a>
+          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 dark:hover:bg-gray-700 p-2 rounded-lg border border-transparent hover:border-teal-300 dark:hover:border-teal-500 transition-colors duration-200">Pricing</a>
+          <a href="#" className="text-gray-600 dark:text-gray-200 hover:text-teal-500 hover:bg-amber-50 dark:hover:bg-gray-700 p-2 rounded-lg border border-transparent hover:border-teal-300 dark:hover:border-teal-500 transition-colors duration-200">Contact</a>
         </nav>
+
       )}
-      <span className="max-md:hidden absolute ml-9 w-95/100 h-[0.5px] bg-teal-400" />
-    </header>
+     <span className="absolute w-9/10 left-1/2 -translate-x-1/2 md:w-[95%] h-[1px] bg-teal-400" />
+  </header>
   );
 };
 
